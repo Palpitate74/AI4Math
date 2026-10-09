@@ -1,0 +1,26 @@
+[
+  {
+    "name": "train-normal-surrounding",
+    "seed": 1101,
+    "trials": 24,
+    "beacon_count": 15,
+    "layout": "surrounding",
+    "noise_std_m": 2.0,
+    "outlier_rate": 0.10,
+    "outlier_bias_m": 20.0,
+    "mobile_rate": 0.05,
+    "mobile_drift_m": 8.0
+  },
+  {
+    "name": "train-corrupted-clustered",
+    "seed": 1102,
+    "trials": 24,
+    "beacon_count": 10,
+    "layout": "clustered",
+    "noise_std_m": 3.5,
+    "outlier_rate": 0.25,
+    "outlier_bias_m": 26.0,
+    "mobile_rate": 0.15,
+    "mobile_drift_m": 12.0
+  }
+]

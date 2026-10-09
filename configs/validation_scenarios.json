@@ -1,0 +1,38 @@
+[
+  {
+    "name": "validation-clean-10",
+    "seed": 2201,
+    "trials": 32,
+    "beacon_count": 10,
+    "layout": "surrounding",
+    "noise_std_m": 2.0,
+    "outlier_rate": 0.05,
+    "outlier_bias_m": 18.0,
+    "mobile_rate": 0.05,
+    "mobile_drift_m": 7.0
+  },
+  {
+    "name": "validation-nlos-15",
+    "seed": 2202,
+    "trials": 32,
+    "beacon_count": 15,
+    "layout": "surrounding",
+    "noise_std_m": 3.0,
+    "outlier_rate": 0.20,
+    "outlier_bias_m": 28.0,
+    "mobile_rate": 0.10,
+    "mobile_drift_m": 12.0
+  },
+  {
+    "name": "validation-mobile-20",
+    "seed": 2203,
+    "trials": 32,
+    "beacon_count": 20,
+    "layout": "clustered",
+    "noise_std_m": 3.5,
+    "outlier_rate": 0.25,
+    "outlier_bias_m": 32.0,
+    "mobile_rate": 0.20,
+    "mobile_drift_m": 15.0
+  }
+]

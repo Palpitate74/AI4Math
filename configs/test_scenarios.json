@@ -1,0 +1,38 @@
+[
+  {
+    "name": "test-nlos-10",
+    "seed": 3301,
+    "trials": 40,
+    "beacon_count": 10,
+    "layout": "surrounding",
+    "noise_std_m": 2.8,
+    "outlier_rate": 0.18,
+    "outlier_bias_m": 25.0,
+    "mobile_rate": 0.10,
+    "mobile_drift_m": 10.0
+  },
+  {
+    "name": "test-mobile-15",
+    "seed": 3302,
+    "trials": 40,
+    "beacon_count": 15,
+    "layout": "clustered",
+    "noise_std_m": 3.5,
+    "outlier_rate": 0.28,
+    "outlier_bias_m": 30.0,
+    "mobile_rate": 0.22,
+    "mobile_drift_m": 16.0
+  },
+  {
+    "name": "test-poor-geometry-20",
+    "seed": 3303,
+    "trials": 40,
+    "beacon_count": 20,
+    "layout": "collinear",
+    "noise_std_m": 2.8,
+    "outlier_rate": 0.15,
+    "outlier_bias_m": 22.0,
+    "mobile_rate": 0.08,
+    "mobile_drift_m": 10.0
+  }
+]
