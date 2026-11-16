@@ -1,0 +1,8 @@
+[
+  {"name":"clean_15","seed":51001,"trials":64,"beacon_count":15,"layout":"surrounding","noise_std_m":2.0,"outlier_rate":0.0,"mobile_rate":0.0,"metadata_mode":"observable"},
+  {"name":"nlos_10","seed":51002,"trials":64,"beacon_count":10,"layout":"surrounding","noise_std_m":2.5,"outlier_rate":0.25,"outlier_bias_m":25.0,"mobile_rate":0.0,"metadata_mode":"observable"},
+  {"name":"helper_drift_15","seed":51003,"trials":64,"beacon_count":15,"layout":"surrounding","noise_std_m":2.5,"outlier_rate":0.15,"mobile_rate":0.25,"mobile_drift_m":14.0,"metadata_mode":"observable"},
+  {"name":"clustered_20","seed":51004,"trials":64,"beacon_count":20,"layout":"clustered","noise_std_m":2.5,"outlier_rate":0.20,"mobile_rate":0.15,"metadata_mode":"observable"},
+  {"name":"collinear_15","seed":51005,"trials":64,"beacon_count":15,"layout":"collinear","noise_std_m":2.5,"outlier_rate":0.20,"mobile_rate":0.10,"metadata_mode":"observable"},
+  {"name":"calibration_15","seed":51006,"trials":64,"beacon_count":15,"layout":"surrounding","noise_std_m":2.5,"outlier_rate":0.10,"mobile_rate":0.10,"calibration_bias":2.0,"metadata_mode":"observable"}
+]

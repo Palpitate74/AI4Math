@@ -1,0 +1,259 @@
+{
+  "run_id": "deepseek-midterm-20261116",
+  "policy": "api",
+  "status": "completed",
+  "completed_iterations": 5,
+  "api_evaluated_iterations": 4,
+  "error_iterations": 1,
+  "comparisons": {
+    "nls": "ablation-validation-nls",
+    "weighted_nls": "ablation-validation-weighted_nls",
+    "huber": "ablation-validation-huber",
+    "cauchy": "ablation-validation-cauchy",
+    "adaptive": "ablation-validation-adaptive",
+    "adaptive_temporal": "ablation-validation-adaptive_temporal"
+  },
+  "final_method": {
+    "name": "huber",
+    "loss_scale_m": 8.0,
+    "reliability_threshold": 0.2,
+    "max_irls_iterations": 10,
+    "use_temporal_weight": true
+  },
+  "protocol": {
+    "scope": "static target; helper drift is observation corruption, not target tracking",
+    "validation_trials": 288,
+    "holdout_trials": 384,
+    "validation_seeds": [
+      41001,
+      41002,
+      41003,
+      41004,
+      41005,
+      41006
+    ],
+    "holdout_seeds": [
+      51001,
+      51002,
+      51003,
+      51004,
+      51005,
+      51006
+    ],
+    "metadata": "precision/age proxies independent of outlier and mobile labels; no oracle",
+    "selection": "Agent candidates only; ablation table is descriptive, not a hidden selection source",
+    "acceptance": "CEP90 improves; median <=110%; failure rate does not increase; clean CEP90 <= baseline+max(10%,0.25m); convergence decline <=5pp",
+    "old_test": "2026-10-09 results are historical only; new seed sets frozen before this run",
+    "bootstrap": "1000 ordinary paired resamples; fixed scenario mixture, not scenario generalization"
+  },
+  "baseline_validation": "ablation-validation-nls",
+  "final_validation": "validation-agent-4-huber-a0effa17",
+  "frozen_at_utc": "2026-11-16T04:33:07.518450+00:00",
+  "holdout": {
+    "nls": "holdout-nls",
+    "weighted_nls": "holdout-weighted_nls",
+    "huber": "holdout-huber",
+    "cauchy": "holdout-cauchy",
+    "adaptive": "holdout-adaptive",
+    "adaptive_temporal": "holdout-adaptive_temporal",
+    "selected": "holdout-selected"
+  },
+  "paired_bootstrap": {
+    "nls": {
+      "comparison": "candidate_minus_baseline",
+      "n_pairs": 384,
+      "seed": 91001,
+      "repeats": 1000,
+      "bootstrap_scope": "ordinary paired bootstrap; fixed scenario mixture only; not industrial evidence",
+      "cep90_m": {
+        "point_estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "failure_rate_over_30m": {
+        "point_estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      },
+      "median_error_m": {
+        "point_estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "weighted_nls": {
+      "comparison": "candidate_minus_baseline",
+      "n_pairs": 384,
+      "seed": 91001,
+      "repeats": 1000,
+      "bootstrap_scope": "ordinary paired bootstrap; fixed scenario mixture only; not industrial evidence",
+      "cep90_m": {
+        "point_estimate": 0.5418623062629102,
+        "ci95": [
+          -1.263642494485648,
+          2.010964019838329
+        ]
+      },
+      "failure_rate_over_30m": {
+        "point_estimate": -0.0026041666666666713,
+        "ci95": [
+          -0.010416666666666671,
+          0.005208333333333336
+        ]
+      },
+      "median_error_m": {
+        "point_estimate": 0.19889625307049208,
+        "ci95": [
+          -0.26428903089028716,
+          0.38351400226179444
+        ]
+      }
+    },
+    "huber": {
+      "comparison": "candidate_minus_baseline",
+      "n_pairs": 384,
+      "seed": 91001,
+      "repeats": 1000,
+      "bootstrap_scope": "ordinary paired bootstrap; fixed scenario mixture only; not industrial evidence",
+      "cep90_m": {
+        "point_estimate": -7.212751263325439,
+        "ci95": [
+          -11.776563506397395,
+          -4.535302777183122
+        ]
+      },
+      "failure_rate_over_30m": {
+        "point_estimate": -0.0078125,
+        "ci95": [
+          -0.026041666666666664,
+          0.007812500000000003
+        ]
+      },
+      "median_error_m": {
+        "point_estimate": -2.6784777371198083,
+        "ci95": [
+          -3.416272607087647,
+          -2.199233878220319
+        ]
+      }
+    },
+    "cauchy": {
+      "comparison": "candidate_minus_baseline",
+      "n_pairs": 384,
+      "seed": 91001,
+      "repeats": 1000,
+      "bootstrap_scope": "ordinary paired bootstrap; fixed scenario mixture only; not industrial evidence",
+      "cep90_m": {
+        "point_estimate": -6.338348173449166,
+        "ci95": [
+          -11.136345944785926,
+          -3.187863298723303
+        ]
+      },
+      "failure_rate_over_30m": {
+        "point_estimate": -0.005208333333333336,
+        "ci95": [
+          -0.02604166666666667,
+          0.015624999999999993
+        ]
+      },
+      "median_error_m": {
+        "point_estimate": -3.520275683949209,
+        "ci95": [
+          -4.439678644034235,
+          -2.967283764750707
+        ]
+      }
+    },
+    "adaptive": {
+      "comparison": "candidate_minus_baseline",
+      "n_pairs": 384,
+      "seed": 91001,
+      "repeats": 1000,
+      "bootstrap_scope": "ordinary paired bootstrap; fixed scenario mixture only; not industrial evidence",
+      "cep90_m": {
+        "point_estimate": -4.858331433921849,
+        "ci95": [
+          -9.47095666947237,
+          -1.7249302432129325
+        ]
+      },
+      "failure_rate_over_30m": {
+        "point_estimate": -0.010416666666666671,
+        "ci95": [
+          -0.028645833333333336,
+          0.0078125
+        ]
+      },
+      "median_error_m": {
+        "point_estimate": -3.644815740733383,
+        "ci95": [
+          -4.52088914589544,
+          -3.0670092040872188
+        ]
+      }
+    },
+    "adaptive_temporal": {
+      "comparison": "candidate_minus_baseline",
+      "n_pairs": 384,
+      "seed": 91001,
+      "repeats": 1000,
+      "bootstrap_scope": "ordinary paired bootstrap; fixed scenario mixture only; not industrial evidence",
+      "cep90_m": {
+        "point_estimate": -4.753824902882821,
+        "ci95": [
+          -9.511886266875267,
+          -1.7864212376653008
+        ]
+      },
+      "failure_rate_over_30m": {
+        "point_estimate": -0.010416666666666671,
+        "ci95": [
+          -0.028645833333333336,
+          0.0078125
+        ]
+      },
+      "median_error_m": {
+        "point_estimate": -3.6722603609999225,
+        "ci95": [
+          -4.595535419463757,
+          -3.1415353127681627
+        ]
+      }
+    },
+    "selected": {
+      "comparison": "candidate_minus_baseline",
+      "n_pairs": 384,
+      "seed": 91001,
+      "repeats": 1000,
+      "bootstrap_scope": "ordinary paired bootstrap; fixed scenario mixture only; not industrial evidence",
+      "cep90_m": {
+        "point_estimate": -7.789970358524528,
+        "ci95": [
+          -12.690649559520029,
+          -5.074408703696955
+        ]
+      },
+      "failure_rate_over_30m": {
+        "point_estimate": -0.013020833333333336,
+        "ci95": [
+          -0.03125000000000001,
+          0.005208333333333336
+        ]
+      },
+      "median_error_m": {
+        "point_estimate": -2.8270676326173083,
+        "ci95": [
+          -3.605881950213807,
+          -2.320073059877002
+        ]
+      }
+    }
+  }
+}

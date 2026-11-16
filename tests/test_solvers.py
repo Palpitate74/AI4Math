@@ -12,6 +12,7 @@ def test_nls_recovers_near_exact_position_without_noise_or_corruption():
         trials=1,
         beacon_count=20,
         noise_std_m=0.0,
+        position_noise_std_m=0.0,
         outlier_rate=0.0,
         mobile_rate=0.0,
         calibration_bias=0.0,

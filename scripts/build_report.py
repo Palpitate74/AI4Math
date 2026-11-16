@@ -1,4 +1,3 @@
-from ble_agent.report import build_report
-
+"""Deprecated v1 report entry point; old report code retained as historical reference."""
 if __name__ == "__main__":
-    print(build_report())
+    raise SystemExit("Deprecated: use python scripts/build_midterm_report.py --run-id YOUR_RUN. This reads only that run's actual evidence.")

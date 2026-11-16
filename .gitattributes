@@ -1,0 +1,2 @@
+# Generated PDF streams must not be treated as text or normalized.
+*.pdf binary
